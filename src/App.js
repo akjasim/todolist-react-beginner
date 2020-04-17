@@ -6,21 +6,7 @@ function App() {
 
   const [todos, setTodos] = useState(
     [
-      {
-        title: 'Hello World',
-        completed: false,
-        isUpdating: false
-      },
-      {
-        title: 'React is awesome!',
-        completed: false,
-        isUpdating: false
-      },
-      {
-        title: 'Django with React is super-awesome!',
-        completed: false,
-        isUpdating: false
-      }
+      
     ]
   )
 
@@ -36,6 +22,7 @@ function App() {
       alert('Todo already exists')
       return
     }
+
     if (submitBtn.innerText === 'Update') {
       const updateTodoIndex = todos.findIndex(todo => todo.isUpdating === true)
       const tempTodos = [...todos]
